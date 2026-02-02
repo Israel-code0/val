@@ -31,4 +31,5 @@ Works on all modern browsers (Chrome, Firefox, Safari, Edge)
 - Fonts from Google Fonts
 
 ## License
+
 Free to use for personal Valentine's Day messages.
