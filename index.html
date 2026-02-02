@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Valentine ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background hearts animation -->
+    <div class="hearts-bg" id="heartsBg"></div>
+
+    <!-- Landing page -->
+    <div class="container">
+        <div class="landing-page" id="landingPage">
+            <h1 class="landing-title">For My Dearest Valentine ❤️</h1>
+            <p class="landing-subtitle">A special message awaits you, my love. Click the button below to unlock my heart's deepest feelings for you.</p>
+            <button class="enter-button" id="enterButton">
+                <i class="fas fa-heart"></i> Open My Heart <i class="fas fa-heart"></i>
+            </button>
+        </div>
+
+        <!-- Main message page -->
+        <div class="message-page" id="messagePage">
+            <div class="header">
+                <h1 class="message-title">To My Forever Valentine</h1>
+                <p class="message-subtitle">Every moment with you is a treasure in my heart</p>
+            </div>
+            
+            <div class="content-wrapper">
+                <div class="image-container">
+                    <div class="image-frame"></div>
+                    <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Romantic couple" class="animated-image" id="mainImage">
+                </div>
+                
+                <div class="message-container">
+                    <div class="message-text">
+                        <p>My dearest love,</p>
+                        <p>From the moment our paths crossed, my life has been painted with colors I never knew existed. Your smile is my sunrise, your laughter my favorite melody, and your love the most precious gift I've ever received.</p>
+                        <p>On this Valentine's Day, I want to remind you that my love for you grows stronger with each passing moment. You are my safe haven, my greatest adventure, and the answer to prayers I didn't even know how to whisper.</p>
+                        <p>Thank you for being you – beautifully, authentically, wonderfully you. I cherish every memory we've created and look forward to all the chapters we have yet to write together.</p>
+                        <p>You have my heart, today and always.</p>
+                    </div>
+                    
+                    <div class="signature">
+                        Forever yours,<br>
+                        <span id="signerName">Your Valentine</span>
+                    </div>
+                    
+                    <div class="hearts-container">
+                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music player -->
+    <div class="music-player" id="musicPlayer">
+        <div class="music-info">
+            <div id="songTitle">Love Song for You</div>
+            <div id="songArtist">Romantic Melody</div>
+        </div>
+        <div class="music-controls">
+            <button class="music-btn" id="playBtn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="music-btn" id="pauseBtn">
+                <i class="fas fa-pause"></i>
+            </button>
+            <input type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" id="volumeSlider">
+        </div>
+    </div>
+
+    <!-- Audio element -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-loving-you-117.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
