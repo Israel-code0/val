@@ -3,87 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Valentine ❤️</title>
+    <title>For You 💖 | A Colorful Valentine</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
 </head>
 <body>
-    <!-- Background hearts animation -->
-    <div class="hearts-bg" id="heartsBg"></div>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bubble b1"></div>
+        <div class="bubble b2"></div>
+        <div class="bubble b3"></div>
+        <div class="bubble b4"></div>
+        <div class="bubble b5"></div>
+    </div>
+    
+    <!-- Floating Hearts -->
+    <div class="floating-hearts">
+        <div class="heart h1">💖</div>
+        <div class="heart h2">💝</div>
+        <div class="heart h3">💕</div>
+        <div class="heart h4">💗</div>
+        <div class="heart h5">💓</div>
+        <div class="heart h6">💞</div>
+    </div>
 
-    <!-- Landing page -->
+    <!-- Main Container -->
     <div class="container">
-        <div class="landing-page" id="landingPage">
-            <h1 class="landing-title">For My Dearest Valentine ❤️</h1>
-            <p class="landing-subtitle">A special message awaits you, my love. Click the button below to unlock my heart's deepest feelings for you.</p>
-            <button class="enter-button" id="enterButton">
-                <i class="fas fa-heart"></i> Open My Heart <i class="fas fa-heart"></i>
-            </button>
-        </div>
-
-        <!-- Main message page -->
-        <div class="message-page" id="messagePage">
-            <div class="header">
-                <h1 class="message-title">To My Forever Valentine</h1>
-                <p class="message-subtitle">Every moment with you is a treasure in my heart</p>
-            </div>
-            
-            <div class="content-wrapper">
-                <div class="image-container">
-                    <div class="image-frame"></div>
-                    <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Romantic couple" class="animated-image" id="mainImage">
+        <!-- Cover Page -->
+        <div class="cover-page active" id="coverPage">
+            <div class="cover-content">
+                <div class="sparkle s1">✨</div>
+                <div class="sparkle s2">✨</div>
+                <div class="sparkle s3">✨</div>
+                
+                <!-- Fixed Envelope -->
+                <div class="envelope-wrapper" id="envelopeWrapper">
+                    <div class="envelope" id="envelope">
+                        <div class="envelope-front">
+                            <div class="envelope-heart">💌</div>
+                        </div>
+                        <div class="envelope-back"></div>
+                        <div class="envelope-flap"></div>
+                    </div>
                 </div>
                 
+                <h1 class="cover-title">A Special Message<br>For Someone Amazing</h1>
+                <p class="cover-subtitle">This is for you, my love ❤️</p>
+                
+                <div class="tap-instruction">
+                    <div class="tap-icon">
+                        <i class="fas fa-hand-point-up"></i>
+                    </div>
+                    <p>Tap the envelope to open</p>
+                </div>
+                
+                <div class="music-note">
+                    <i class="fas fa-music"></i>
+                    <span>Love is playing...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="mainContent">
+            <!-- Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">
+                        <span class="title-word">To</span>
+                        <span class="title-word">The</span>
+                        <span class="title-word">Most</span>
+                        <span class="title-word amazing">Amazing</span>
+                        <span class="title-word">Person</span>
+                    </h1>
+                    <div class="header-subtitle">
+                        <div class="subtitle-line">Every moment with you is a</div>
+                        <div class="subtitle-line colorful">colorful adventure</div>
+                    </div>
+                </div>
+                
+                <div class="love-meter">
+                    <div class="meter-label">How much I love you:</div>
+                    <div class="meter-bar">
+                        <div class="meter-fill" id="loveMeter">
+                            <div class="meter-sparkle">✨</div>
+                        </div>
+                    </div>
+                    <button class="meter-btn" id="boostLove">
+                        <i class="fas fa-heart-circle-plus"></i> Boost Love
+                    </button>
+                </div>
+            </div>
+
+            <!-- Auto-Changing Photo Gallery -->
+            <div class="photo-section">
+                <div class="section-title">
+                    <div class="title-icon">📸</div>
+                    <h2>Our Colorful Journey</h2>
+                    <div class="title-sparkle">✨</div>
+                </div>
+                
+                <div class="auto-gallery-container">
+                    <div class="gallery-display">
+                        <div class="photo-frame">
+                            <div class="photo-slide active">
+                                <img src="assets/images/1.jpeg" 
+                                     alt="Our First Laugh" class="gallery-photo">
+                                <div class="photo-overlay">
+                                    <h3 class="photo-title">Beautiful You</h3>
+                                    <p class="photo-description">The day your smile became my favorite view</p>
+                                </div>
+                            </div>
+                            <div class="photo-slide">
+                                <img src="assets/images/2.jpeg" 
+                                     alt="Shared Adventures" class="gallery-photo">
+                                <div class="photo-overlay">
+                                    <h3 class="photo-title">My Beautiful Queen</h3>
+                                    <p class="photo-description">You are my everything, my love, my heart</p>
+                                </div>
+                            </div>
+                            <div class="photo-slide">
+                                <img src="assets/images/4.jpeg" 
+                                     alt="Quiet Moments" class="gallery-photo">
+                                <div class="photo-overlay">
+                                    <h3 class="photo-title">My Heart's Beloved</h3>
+                                    <p class="photo-description">In the silence, our hearts speak the loudest</p>
+                                </div>
+                            </div>
+                            <div class="photo-slide">
+                                <img src="assets/images/7.jpeg" 
+                                     alt="Future Dreams" class="gallery-photo">
+                                <div class="photo-overlay">
+                                    <h3 class="photo-title">Forever and Always</h3>
+                                    <p class="photo-description">Building our forever, together</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gallery Controls -->
+                        <div class="gallery-controls">
+                            <button class="gallery-nav prev-btn" id="prevBtn">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav next-btn" id="nextBtn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Info -->
+                    <div class="gallery-info">
+                        <div class="current-photo-info">
+                            <div class="photo-counter">
+                                <span id="currentSlide">1</span> / <span id="totalSlides">4</span>
+                            </div>
+                            <h3 id="currentTitle">Our First Laugh</h3>
+                            <p id="currentDescription">The day your smile became my favorite view</p>
+                        </div>
+                        
+                        <!-- Auto-play Toggle -->
+                        <div class="auto-play-control">
+                            <button class="play-toggle" id="autoPlayToggle">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <span>Auto-playing every 5 seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Love Message -->
+            <div class="message-section">
                 <div class="message-container">
-                    <div class="message-text">
-                        <p>My dearest love,</p>
-                        <p>From the moment our paths crossed, my life has been painted with colors I never knew existed. Your smile is my sunrise, your laughter my favorite melody, and your love the most precious gift I've ever received.</p>
-                        <p>On this Valentine's Day, I want to remind you that my love for you grows stronger with each passing moment. You are my safe haven, my greatest adventure, and the answer to prayers I didn't even know how to whisper.</p>
-                        <p>Thank you for being you – beautifully, authentically, wonderfully you. I cherish every memory we've created and look forward to all the chapters we have yet to write together.</p>
-                        <p>You have my heart, today and always.</p>
+                    <div class="message-header">
+                        <div class="message-icon">💌</div>
+                        <h2>My Heart's Message</h2>
+                        <div class="message-date">February 14, 2024</div>
                     </div>
                     
-                    <div class="signature">
-                        Forever yours,<br>
-                        <span id="signerName">Your Valentine</span>
+                    <div class="message-content">
+                        <div class="message-bubble from-me">
+                            <div class="bubble-content">
+                                <p class="greeting">My dearest Enny💖,</p>
+                                <p>From the moment you walked into my life 🌟, everything changed in the most beautiful way.</p>
+                            </div>
+                            <div class="bubble-tail"></div>
+                        </div>
+                        
+                        <div class="message-bubble from-you">
+                            <div class="bubble-content">
+                                <p>You are my smile on hard days 😊, my peace in chaos 🕊️, and my favorite thought without trying 💭❤️. Loving you feels natural, like breathing effortless and necessary 💞.</p>
+                            </div>
+                            <div class="bubble-tail"></div>
+                        </div>
+                        
+                        <div class="message-bubble from-me">
+                            <div class="bubble-content">
+                                <div class="love-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>This Valentine’s Day 💌 isn’t just about flowers 🌹 or cards; it’s about celebrating you ,your kindness 🤍, your laughter 😄, your heart ❤️, and the way you make my world brighter just by being in it ✨🌍</p>
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <div class="bubble-tail"></div>
+                        </div>
+                        
+                        <div class="message-bubble from-you">
+                            <div class="bubble-content">
+                                <p>Thank you for loving me 🤗, supporting me 💪, and choosing me every day 🥰.</p>
+                            </div>
+                            <div class="bubble-tail"></div>
+                        </div>
+                        
+                        <div class="message-bubble from-me">
+                            <div class="bubble-content">
+                                <p>I promise to keep cherishing you 💍, growing with you 🌱, and loving you more deeply with every heartbeat 💓.</p>
+                                <p>Today and always ⏳, my heart is yours 💘.</p>
+                            </div>
+                            <div class="bubble-tail"></div>
+                        </div>
+
+                        <div class="message-bubble from-you">
+                            <div class="bubble-content">
+                                <p>Happy Valentine’s Day, my love ❤️Forever yours 💕💫</p>
+                            </div>
+                            <div class="bubble-tail"></div>
+                        </div>
                     </div>
                     
-                    <div class="hearts-container">
-                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
-                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
-                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
-                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
-                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                    <div class="message-interaction">
+                        <button class="heart-btn" id="sendLove">
+                            <div class="btn-pulse"></div>
+                            <i class="fas fa-heart"></i>
+                            <span>Send Love</span>
+                        </button>
+                        
+                        <div class="love-count">
+                            <div class="count-label">Hearts Sent:</div>
+                            <div class="count-number" id="heartCount">0</div>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Interactive Section -->
+            <div class="interactive-section">
+                <div class="interactive-title">
+                    <h2>Create Our Love Story</h2>
+                    <p>Add your own colorful touches!</p>
+                </div>
+                
+                <div class="color-palette">
+                    <div class="color-option" style="--color: #ff6b8b;" data-color="#ff6b8b"></div>
+                    <div class="color-option" style="--color: #ff9e6d;" data-color="#ff9e6d"></div>
+                    <div class="color-option" style="--color: #ffd166;" data-color="#ffd166"></div>
+                    <div class="color-option" style="--color: #06d6a0;" data-color="#06d6a0"></div>
+                    <div class="color-option" style="--color: #118ab2;" data-color="#118ab2"></div>
+                    <div class="color-option" style="--color: #9d4edd;" data-color="#9d4edd"></div>
+                </div>
+                
+                <div class="interactive-canvas" id="loveCanvas">
+                    <div class="canvas-instruction">
+                        <i class="fas fa-hand-pointer"></i>
+                        <p>Tap anywhere to add hearts!</p>
+                    </div>
+                </div>
+                
+                <div class="interactive-controls">
+                    <button class="control-btn" id="clearCanvas">
+                        <i class="fas fa-eraser"></i> Clear
+                    </button>
+                    <button class="control-btn" id="saveCanvas">
+                        <i class="fas fa-download"></i> Save
+                    </button>
+                    <button class="control-btn" id="surpriseBtn">
+                        <i class="fas fa-gift"></i> Surprise!
+                    </button>
+                </div>
+            </div>
+
+            <!-- Final Section -->
+            <div class="final-section">
+                <div class="final-content">
+                    <div class="final-sparkle">✨</div>
+                    
+                    <h2 class="final-title">You Complete My World</h2>
+                    
+                    <div class="love-clock">
+                        <div class="clock-face">
+                            <div class="clock-heart">💖</div>
+                            <div class="clock-time" id="loveTime">∞</div>
+                        </div>
+                        <div class="clock-label">Days I'll Love You</div>
+                    </div>
+                    
+                    <div class="final-message">
+                        <p>Every second with you is precious.<br>Every memory is a treasure.<br>Every tomorrow is a promise.</p>
+                        
+                        <div class="signature">
+                            <div class="signature-line"></div>
+                            <h3 class="signature-name" id="signatureName">Your Secret Admirer 💖</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="final-actions">
+                        <button class="action-btn replay" id="replayBtn">
+                            <i class="fas fa-redo"></i> Watch Again
+                        </button>
+                        <button class="action-btn share" id="shareBtn">
+                            <i class="fas fa-share-heart"></i> Share Love
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="final-hearts">
+                    <div class="final-heart">💖</div>
+                    <div class="final-heart">💝</div>
+                    <div class="final-heart">💕</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Music player -->
-    <div class="music-player" id="musicPlayer">
-        <div class="music-info">
-            <div id="songTitle">Love Song for You</div>
-            <div id="songArtist">Romantic Melody</div>
-        </div>
-        <div class="music-controls">
-            <button class="music-btn" id="playBtn">
-                <i class="fas fa-play"></i>
-            </button>
-            <button class="music-btn" id="pauseBtn">
-                <i class="fas fa-pause"></i>
-            </button>
-            <input type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" id="volumeSlider">
-        </div>
-    </div>
+    <!-- Celebration Confetti -->
+    <canvas id="confettiCanvas"></canvas>
 
-    <!-- Audio element -->
-    <audio id="backgroundMusic" loop>
-        <source src="https://assets.mixkit.co/music/preview/mixkit-loving-you-117.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+    <!-- Audio Element (Hidden) -->
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Sound Effects -->
+    <audio id="heartSound">
+        <source src="" type="audio/mpeg">
+    </audio>
+    
+    <audio id="sparkleSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-magic-sparkles-300.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Photo Change Sound -->
+    <audio id="photoChangeSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-camera-shutter-click-1131.mp3" type="audio/mpeg">
     </audio>
 
     <script src="script.js"></script>
